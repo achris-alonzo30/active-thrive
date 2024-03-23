@@ -1,16 +1,22 @@
 import { TextInput } from 'react-native-paper';
 
-export const SearchBar = () => {
+type SearchBarProps = {
+  search: string,
+  setSearch: React.Dispatch<React.SetStateAction<string>>,
+  runSearch: () => void
+}
+
+export const SearchBar = ({ search, setSearch, runSearch }: SearchBarProps) => {
   return (
     <TextInput
       label="Search Food"
-      value={""}
-      onChangeText={() => {}}
+      value={search}
+      onChangeText={setSearch}
       className="bg-gray-200 mb-1"
       mode="outlined"
-      outlineColor="white"
-      activeOutlineColor='blue'
-      right={<TextInput.Icon icon="magnify" />}
+      outlineColor="#e5e7eb"
+      activeOutlineColor="#6366f1"
+      right={<TextInput.Icon onPress={runSearch} icon="magnify" />}
     />
   );
 };

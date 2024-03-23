@@ -1,9 +1,11 @@
-import { ActivityIndicator, View } from "react-native"
+import { View } from "react-native";
+import { ActivityIndicator } from 'react-native-paper';
+
 
 export const Loader = () => {
     return (
         <View className="flex items-center justify-center">
-            <ActivityIndicator size="large" color="blue" />
+            <ActivityIndicator animating={true} color={"blue"} />
         </View>
     )
 }

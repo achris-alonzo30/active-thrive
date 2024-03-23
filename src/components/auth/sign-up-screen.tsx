@@ -88,7 +88,7 @@ export default function SignUpScreen() {
                     )}
                     <View className="">
                         <TextInput
-                            autoCapitalize="none"
+                            autoCapitalize="words"
                             value={firstName}
                             placeholder="First Name..."
                             onChangeText={setFirstName}
@@ -102,7 +102,7 @@ export default function SignUpScreen() {
                     </View>
                     <View>
                         <TextInput
-                            autoCapitalize="none"
+                            autoCapitalize="words"
                             value={lastName}
                             placeholder="Last Name..."
                             onChangeText={setLastName}
